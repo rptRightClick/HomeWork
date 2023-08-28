@@ -21,7 +21,7 @@ typedef struct {
 } HashTable;
 
 // простая хэш функция
-unsigned int hash(const char *key, size_t size){
+size_t hash(const char *key, size_t size){
 	unsigned int hash = 5381;
 	for(size_t i = 0; key[i] != '\0';i++){
 		if(isalnum(key[i])){//исключаем знаки препинания (не работает, не знаю почему) , думаю из-за кодировки , но не уверен
