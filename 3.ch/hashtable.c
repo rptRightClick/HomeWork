@@ -20,22 +20,20 @@ typedef struct {
 	size_t count; // переменная для слежения заполненности таблицы
 } HashTable;
 
-// простая хэш функция
-size_t hash(const char *key, size_t size){
-	size_t hash = 5381;
-	for(size_t i = 0; key[i] != '\0';i++){
-		if(isalnum(key[i])){//исключаем знаки препинания (не работает, не знаю почему) , думаю из-за кодировки , но не уверен
-			hash = hash * 33 << key[i];
-		}
+// простая хэш функция djb2
+unsigned long hash(const char *key){
+	unsigned long hash = 5381;
+	int c;
+	
+	while((c=*key++)!=0){
+			hash=((hash<<5)+hash)+c;
 	}
-	
-	
-	return hash%size;
+	return hash;
 }
 
 // Вставка пары ключ-значение в хэш-таблицу
 void insert(HashTable *table, const char *key, unsigned int value){
-	unsigned int index = hash(key, table->sizeTable);
+	unsigned long index = (hash(key))%table->sizeTable;
 	
 	while (table->data[index].key != NULL){
 		if (strcmp(table->data[index].key,key)==0){//проверяем занята ли ячейка этим же словом
@@ -52,7 +50,7 @@ void insert(HashTable *table, const char *key, unsigned int value){
 
 // данная функция отличается от insert тем, что не происходит добавления количество повторений, а просто идет заполнение таблицы (копирование)
 void insertInternal(HashTable *table,const char *key, int value){
-	unsigned int index = hash(key, table->sizeTable);
+	unsigned long index = (hash(key))%table->sizeTable;
 	
 	while(table->data[index].key != NULL){
 		index = (index+1)%table->sizeTable;
@@ -121,11 +119,18 @@ int main (int argc, char *argv[]){
 	// Приведение слова к нижнему регистру
 	char word[MAX_WORD_LENGTH];
 	while (fscanf(file,"%s",word )== 1){
+		char modified_word[MAX_WORD_LENGTH];// массив для хранения модифицированного слова(без знаков препинания, нижний регистр)
+		int mod_index = 0;
+		
 		for (size_t i=0; word[i];i++){
-			word[i] = tolower(word[i]);
+			if(isalnum(word[i])){
+				 modified_word[mod_index++] = tolower(word[i]);
+			}
 		}
+		modified_word[mod_index] = '\0';
+		
 		checkResize(wordeFrequency, porog);//проверка заполненности таблицы
-		insert(wordeFrequency, word,1);// добавляем значение в таблицу
+		insert(wordeFrequency, modified_word,1);// добавляем значение в таблицу
 	}
 	
 	fclose(file);
