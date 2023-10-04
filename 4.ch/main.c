@@ -8,7 +8,7 @@
 
 
 
-// Функция для обработки ответа ,которая сохроняет весь json в структуру
+// Функция для обработки ответа ,которая сохраняет весь json в структуру
 static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
     size_t realsize = size * nmemb;
     struct memory *mem = (struct memory *)userp;
