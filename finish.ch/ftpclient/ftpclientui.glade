@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="LoadWindow">
+    <property name="can-focus">False</property>
+    <property name="no-show-all">True</property>
+    <property name="resizable">False</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="destroy-with-parent">True</property>
+    <property name="icon">favicon-32x32.png</property>
+    <signal name="delete-event" handler="destroy_loadWindow_cb" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkNotebook">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="tab-pos">left</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">rec.jpg</property>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">страница 1</property>
+              </object>
+              <packing>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">rec2.jpg</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">страница 2</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">rec3.jpg</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">страница 3</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="height-request">1</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Скачивание и установка нужных файлов</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkProgressBar" id="LoadProgres">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="show-text">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkStatusbar" id="loadStatusBar">
+                <property name="visible">True</property>
+                <property name="sensitive">False</property>
+                <property name="can-focus">False</property>
+                <property name="margin-start">10</property>
+                <property name="margin-end">10</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">2</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="cancelLoad">
+                <property name="label" translatable="yes">отмена</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <signal name="clicked" handler="destroy_loadWindow_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="exitWindow">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="hide-titlebar-when-maximized">True</property>
+    <property name="icon">favicon-32x32.png</property>
+    <property name="type-hint">notification</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <property name="decorated">False</property>
+    <property name="deletable">False</property>
+    <property name="attached-to">LoadWindow</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Вы действительно хотите прервать установку?</property>
+                <property name="justify">center</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="homogeneous">True</property>
+                <child>
+                  <object class="GtkButton" id="exitButton">
+                    <property name="label" translatable="yes">да</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <signal name="clicked" handler="exitButton_clicked_cb" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="cancelExitButton">
+                    <property name="label" translatable="yes">нет</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <signal name="clicked" handler="cancelExitButton_clicked_cb" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">youtube.png</property>
+  </object>
+  <object class="GtkImage" id="image10">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">triangle-exclamation.svg</property>
+  </object>
+  <object class="GtkWindow" id="warningOpenWindow">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center-on-parent</property>
+    <property name="icon">favicon-32x32.png</property>
+    <property name="skip-taskbar-hint">True</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Перезапустите программу от имени администратора</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkButton" id="exitWindo">
+                <property name="label" translatable="yes">принять</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image10</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="exitWindo_clicked_cb" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image11">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">power.svg</property>
+  </object>
+  <object class="GtkImage" id="image12">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">circle-pause.svg</property>
+  </object>
+  <object class="GtkWindow" id="rebutWindow">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="hide-titlebar-when-maximized">True</property>
+    <property name="icon">favicon-32x32.png</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <property name="deletable">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Для подолжения работы необходимо перезагрузить компьютер</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="rebutButton">
+                <property name="label" translatable="yes">перезагрузить сейчас</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image11</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="rebutButton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="laterButton">
+                <property name="label" translatable="yes">перезагрузить позже</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image12</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="laterButton_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image13">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">display.svg</property>
+  </object>
+  <object class="GtkImage" id="image14">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">display-pulse.svg</property>
+  </object>
+  <object class="GtkImage" id="image15">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">arrow-right.svg</property>
+  </object>
+  <object class="GtkWindow" id="install_mach3_window">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Mach3 готова к установки.
+Следуйте инструкции.</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="next_button">
+            <property name="label" translatable="yes">далее</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image15</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="next_button_clicked_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image16">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">circle-xmark.svg</property>
+  </object>
+  <object class="GtkWindow" id="cancel_install_mach3_window">
+    <property name="can-focus">False</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Установка была отменена</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="cancel_install_mach3_button">
+            <property name="label" translatable="yes">закрыть</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image16</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="cancel_install_mach3_button_clicked_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image17">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">circle-xmark.svg</property>
+  </object>
+  <object class="GtkWindow" id="compile_window">
+    <property name="can-focus">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="icon">favicon-32x32.png</property>
+    <property name="urgency-hint">True</property>
+    <property name="deletable">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Все готово к использованию</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="exit_button">
+            <property name="label" translatable="yes">закрыть</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image17</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="exit_button_clicked_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image18">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">circle-xmark.svg</property>
+  </object>
+  <object class="GtkWindow" id="error_save_window">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">200</property>
+    <property name="type-hint">notification</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <property name="deletable">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Неправильное поведение программы</property>
+            <attributes>
+              <attribute name="scale" value="2"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="exit_button_save">
+            <property name="label" translatable="yes">закрыть</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image18</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="exit_button_clicked_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image19">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">folder-tree.svg</property>
+  </object>
+  <object class="GtkWindow" id="select_install_window">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center-on-parent</property>
+    <property name="hide-titlebar-when-maximized">True</property>
+    <property name="icon">favicon-32x32.png</property>
+    <property name="type-hint">dialog</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <property name="deletable">False</property>
+    <property name="transient-for">LoadWindow</property>
+    <property name="attached-to">LoadWindow</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">На компьютере уже установлена mach3
+(выберите вариант для продолжения)</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="full_install_mach3">
+                <property name="label" translatable="yes">  Переустановить
+(полная установка)</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image13</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="full_install_mach3_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="instal_manual_and_profile">
+                <property name="label" translatable="yes">Установить профиль и инструкции</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image19</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="instal_manual_and_profile_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="instal_only_config_mach3">
+                <property name="label" translatable="yes">Установить только профиль</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image14</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="instal_only_config_mach3_clicked_cb" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">app.png</property>
+  </object>
+  <object class="GtkImage" id="image20">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">circle-xmark.svg</property>
+  </object>
+  <object class="GtkWindow" id="finish_window">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="type-hint">notification</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="deletable">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">			Все готово к использованию
+(инструкции находятся  на рабочем столе в папке manual)</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="finish_button">
+            <property name="label" translatable="yes">закрыть</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image20</property>
+            <property name="always-show-image">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">vk_icon.png</property>
+  </object>
+  <object class="GtkImage" id="image4">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">address.png</property>
+  </object>
+  <object class="GtkImage" id="image5">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">instagram.png</property>
+  </object>
+  <object class="GtkImage" id="image6">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">logo.png</property>
+  </object>
+  <object class="GtkImage" id="image7">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">wrench.svg</property>
+  </object>
+  <object class="GtkImage" id="image8">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">arrows-rotate-right.svg</property>
+  </object>
+  <object class="GtkWindow" id="Mainwindow">
+    <property name="can-focus">False</property>
+    <property name="resizable">False</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="icon">favicon-32x32.png</property>
+    <signal name="notify::destroy" handler="destroy_main_cb" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkImage">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">cnc.png</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="spacing">22</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkLinkButton" id="link_youtube">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image1</property>
+                <property name="relief">none</property>
+                <property name="always-show-image">True</property>
+                <property name="uri">https://www.youtube.com/@cncmodelist</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLinkButton" id="link_app">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image2</property>
+                <property name="relief">none</property>
+                <property name="always-show-image">True</property>
+                <property name="uri">https://api.whatsapp.com/send/?phone=79288455509&amp;text=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82+%D0%B2%D0%B0%D1%88%D0%B8+%D1%81%D1%82%D0%B0%D0%BD%D0%BA%D0%B8&amp;type=phone_number&amp;app_absent=0</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLinkButton" id="link_vk">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image3</property>
+                <property name="relief">none</property>
+                <property name="always-show-image">True</property>
+                <property name="uri">https://vk.com/cncmodelist</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLinkButton" id="link_dzen">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image4</property>
+                <property name="relief">none</property>
+                <property name="uri">https://dzen.ru/id/5d3ebd9f31878200ae833b9c</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLinkButton" id="link_insta">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image5</property>
+                <property name="relief">none</property>
+                <property name="always-show-image">True</property>
+                <property name="uri">https://www.instagram.com/cncmodelist/</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLinkButton" id="link_site">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image6</property>
+                <property name="relief">none</property>
+                <property name="always-show-image">True</property>
+                <property name="uri">https://cncmodelist.ru/</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="height-request">2</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkLabel" id="slovo">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Данный номер указан в документах к станку, а также вы можете узнать его обратившись в  техподдержку.</property>
+                <property name="label" translatable="yes">Введите уникальный код пользователя:</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="input">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="max-length">15</property>
+                <property name="input-purpose">password</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="setup">
+            <property name="label" translatable="yes">установить</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image7</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="setup_clicked_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="reconnect">
+            <property name="label" translatable="yes">повторно подключиться</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image8</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="reconnect_clicked_cb" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="height-request">2</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="info">
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">False</property>
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">2</property>
+            <property name="homogeneous">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">7</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image9">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixbuf">triangle-exclamation.svg</property>
+  </object>
+  <object class="GtkWindow" id="NoSearch">
+    <property name="can-focus">False</property>
+    <property name="no-show-all">True</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">200</property>
+    <property name="hide-titlebar-when-maximized">True</property>
+    <property name="icon-name">dialog-error</property>
+    <property name="type-hint">notification</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <property name="decorated">False</property>
+    <property name="deletable">False</property>
+    <signal name="notify::destroy" handler="destroy_NoSearch_cb" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="border-width">2</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkLabel" id="NeVerniiCode">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Неверный код пользователя</property>
+                <attributes>
+                  <attribute name="scale" value="2"/>
+                </attributes>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">3</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkViewport">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkButton" id="NoSearch_button">
+                <property name="label" translatable="yes">принять</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image9</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="NoSearch_button_clicked_cb" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">3</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="manual_window">
+    <property name="can-focus">False</property>
+    <property name="type">popup</property>
+    <property name="resizable">False</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="default-height">300</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="skip-pager-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <property name="deletable">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkImage">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">cnc.png</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lable">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">1. Согласитель с лицензией
+2. Оставьте путь по умолчанию "C:\Mach3"
+3. Снимите галочку с "Parallel Port Driver"
+4. Нажмите "Next"</property>
+            <property name="track-visited-links">False</property>
+            <attributes>
+              <attribute name="size" value="12288"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
